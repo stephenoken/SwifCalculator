@@ -304,7 +304,7 @@
                                                             <color key="titleColor" red="0.92549019610000005" green="0.93725490199999995" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
                                                         <connections>
-                                                            <action selector="isRightOfFloatingPoint:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jsv-QX-LpS"/>
+                                                            <action selector="makeFloatingPoint" destination="BYZ-38-t0r" eventType="touchUpInside" id="3yd-Fw-eDv"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KdP-et-U3w">

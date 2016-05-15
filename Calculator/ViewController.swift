@@ -48,6 +48,16 @@ class ViewController: UIViewController {
             displayValue = brain.result
         }
     }
+    
+    @IBAction func makeFloatingPoint() {
+        if let value = display.text{
+            if !value.containsString(".") {
+                display.text = value + "."
+            } else if value[value.endIndex.predecessor()] == "."{
+                display.text = value.substringToIndex(value.endIndex.predecessor())
+            }
+        }
+    }
     @IBAction private func performOperation(sender: UIButton) {
         if userIsInTheMiddleOfTyping {
             brain.setOperand(displayValue)
@@ -59,13 +69,5 @@ class ViewController: UIViewController {
             brain.performOperation(mathematicalSymbol)
         }
         displayValue = brain.result
-    }
-    @IBAction func isRightOfFloatingPoint(sender: UIButton) {
-        let floatingPoint = sender.currentTitle!
-        if userIsLeftOfFloatingPoint {
-           let textCurrentlyInDisplay = display.text!
-            display.text = textCurrentlyInDisplay + floatingPoint
-        }
-        userIsLeftOfFloatingPoint = false
     }
 }
